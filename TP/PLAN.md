@@ -1,4 +1,5 @@
 PLAN DE TESTS – Projet Triangulator
+
 Objectif général
 Ce plan de tests détaille comment valider un microservice appelé Triangulator, responsable du calcul de la triangulation d’un ensemble de points 2D à partir d’un identifiant fourni par le PointSetManager.
 Les tests sont réalisés afin de garantir la précision des calculs, la robustesse du service face aux erreurs et autres défaillances externes, ses performances, ainsi que sa conformité à l’API définie.
@@ -12,11 +13,6 @@ Les tests sont répartis en trois grandes catégories :
 2. Tests unitaires
 Les tests unitaires concernent principalement le module de logique du projet (logic.py).
 Chaque test suivra le modèle Arrange / Act / Assert et couvrira à la fois les cas normaux et les cas d’erreur.
-Les fonctions ciblées sont les suivantes :
-•	decode_pointset(binary_data), qui convertit des données binaires en liste de points.
-•	encode_triangles(triangles), qui effectue l’opération inverse.
-•	triangulate(points), qui génère des triangles à partir d’un ensemble de points.
-•	validate_points(points), qui vérifie la validité et la cohérence des données en entrée.
 Les tests incluront également des jeux de données synthétiques, comprenant :
 •	des cas simples (triangle de base, carré divisé en deux triangles),
 •	des cas limites (points alignés, très proches ou en double),
@@ -49,30 +45,20 @@ tests/
 Cette organisation facilitera la maintenance et permettra de distinguer clairement les différents types de tests.
 Des fichiers de test supplémentaires (fixtures, données binaires exemples, mocks) pourront être placés dans un sous-dossier tests/data/ pour faciliter la réutilisation et améliorer la lisibilité des tests.
  
-6. Automatisation avec Makefile
-Un Makefile sera ajouté au projet pour automatiser les principales opérations liées aux tests et à la qualité du code.
-Les commandes prévues sont :
-•	make test : exécute tous les tests du projet.
-•	make unit_test : exécute uniquement les tests unitaires et d’intégration.
-•	make perf_test : exécute les tests de performance.
-•	make lint : vérifie la qualité et la conformité du code source.
-•	make coverage : génère un rapport de couverture des tests.
-•	make doc : produit la documentation HTML du projet.
- 
-7. Méthodologie
+6. Méthodologie
 Le développement suivra la méthode Test Driven Development (TDD), selon le cycle classique :
 •	Red : écrire un test qui échoue.
 •	Green : écrire le minimum de code pour le faire passer.
 •	Refactor : améliorer le code sans casser les tests existants.
-Cette méthode garantit un code robuste, maintenable et évolutif.
  
-8. Objectif final
+7. Objectif final
 À la fin du projet, le microservice Triangulator devra :
 •	Réussir l’ensemble des tests unitaires et d’intégration,
 •	Atteindre une couverture de code élevée,
 •	Respecter les standards de qualité et de documentation,
 •	Offrir un service fiable, performant et stable.
-9. Livrables attendus
+
+8. Livrables attendus
 
 Conformément au cahier des charges du TP, les livrables suivants seront produits :
 - `PLAN.md` : Plan de tests détaillant la stratégie de validation (ce document).
