@@ -1,5 +1,6 @@
 PLAN DE TESTS — Triangulator Project (M1 ILSEN)
-🎯 Objectif du document
+
+Objectif du document
 
 Ce document décrit de manière structurée la stratégie de tests mise en place pour valider le microservice Triangulator et son interaction avec le PointSetManager.
 Le plan couvre :
@@ -164,4 +165,4 @@ la performance du système
 
 la qualité et la maintenabilité du code
 
-➡️ Il constitue la base de la stratégie de validation appliquée dans ce projet.
+Il constitue la base de la stratégie de validation appliquée dans ce projet.
