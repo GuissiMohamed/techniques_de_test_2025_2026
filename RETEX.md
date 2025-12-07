@@ -1,5 +1,6 @@
 RETEX — Retour d’expérience sur le projet Triangulator
-🎯 Introduction
+
+Introduction
 
 Ce document présente mon retour d’expérience sur la réalisation du projet Triangulator dans le cadre du module Techniques de Test (M1 ILSEN).
 Je décris ici :
@@ -13,7 +14,7 @@ les décisions prises en cours de route
 ce que je ferais autrement avec le recul
 
 1. Ce que j’ai bien réussi
-✔️ Mise en place d’une architecture claire
+   ✔️ Mise en place d’une architecture claire
 
 Le projet respecte la séparation en deux microservices :
 
@@ -43,7 +44,7 @@ Un petit frontend HTML permet de tester facilement la triangulation.
 Même si ce n’était pas demandé dans le sujet, cela a aidé à valider le comportement de l’API.
 
 2. Difficultés rencontrées
-❗ Représentation binaire
+   ❗ Représentation binaire
 
 Le format binaire m’a demandé un temps d’adaptation, notamment pour :
 
@@ -63,7 +64,7 @@ Cela m’a obligé à comprendre un algorithme simple basé sur l’éventail (f
 Démarrer deux serveurs Flask dans des processus séparés pour les tests était un défi technique.
 
 3. Ce que je ferais différemment
-🔄 Préparer le plan de test plus tôt
+   🔄 Préparer le plan de test plus tôt
 
 Avec le recul, j’aurais dû rédiger le plan avant de coder la logique, comme le demande réellement la démarche "test first".
 
