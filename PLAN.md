@@ -1,4 +1,4 @@
-PLAN DE TESTS — Triangulator Project (M1 ILSEN)
+PLAN DE TESTS — Triangulator Project
 
 Objectif du document
 
@@ -38,8 +38,8 @@ Calcule la triangulation (implémentation "from scratch", sans SciPy)
 Renvoie les résultats en JSON ou binaire (Triangles)
 
 2. Types de tests prévus
-2.1 Tests unitaires
-Objectifs
+   2.1 Tests unitaires
+   Objectifs
 
 Vérifier individuellement le comportement des composants internes :
 
@@ -62,13 +62,13 @@ Les floats doivent être traités avec tolérance (float32 ↔ float64)
 La triangulation doit fonctionner dans tous les cas non dégénérés
 
 Tests unitaires prévus
-Fonction	Tests
-pointset_to_bytes	encode un ensemble de points
-bytes_to_pointset	decode correctement, tolérance float
-triangles_to_bytes	encode points + triangles
-bytes_to_triangles	decode un flux complet
-validate_points	formats invalides, valeurs incorrectes
-triangulate	cas normaux, 1 triangle, multiples triangles, doublons, colinéarité
+Fonction Tests
+pointset_to_bytes encode un ensemble de points
+bytes_to_pointset decode correctement, tolérance float
+triangles_to_bytes encode points + triangles
+bytes_to_triangles decode un flux complet
+validate_points formats invalides, valeurs incorrectes
+triangulate cas normaux, 1 triangle, multiples triangles, doublons, colinéarité
 
 Les tests unitaires sont situés dans :
 ➡️ tests/unit/
@@ -87,12 +87,12 @@ Justification
 Le sujet insiste sur la communication binaire entre composants, ce qui nécessite une validation spécifique.
 
 Tests d’intégration prévus
-Scénario	Description
-POST binaire /points	enregistre un PointSet
-GET binaire /points/{id}/binary	récupère les points encodés
-POST /triangulate (JSON)	triangulation simple
-POST /triangulate + Accept: application/octet-stream	réponse binaire Triangles
-Erreurs attendues	ID inexistant, formats invalides, PSM injoignable
+Scénario Description
+POST binaire /points enregistre un PointSet
+GET binaire /points/{id}/binary récupère les points encodés
+POST /triangulate (JSON) triangulation simple
+POST /triangulate + Accept: application/octet-stream réponse binaire Triangles
+Erreurs attendues ID inexistant, formats invalides, PSM injoignable
 
 Les tests d’intégration sont situés dans :
 ➡️ tests/integration/
@@ -117,11 +117,11 @@ la conversion binaire peut être coûteuse
 les tests de performance doivent être séparés
 
 Tests prévus
-Test	Charge	Critère
-triangulation small	100 points	< 200 ms
-triangulation medium	500 points	< 800 ms
-encodage PointSet	2000 points	< 300 ms
-décodage PointSet	idem	< 300 ms
+Test Charge Critère
+triangulation small 100 points < 200 ms
+triangulation medium 500 points < 800 ms
+encodage PointSet 2000 points < 300 ms
+décodage PointSet idem < 300 ms
 
 Les tests de performance sont situés dans :
 ➡️ tests/performance/
@@ -133,7 +133,6 @@ Objectif : > 90% de lignes couvertes
 Mesurée via :
 
 make coverage
-
 
 Les parties non couvertes acceptées :
 
