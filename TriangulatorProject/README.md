@@ -39,8 +39,6 @@ BINAIRE 🔄 HTTP
 | - JSON / BIN |
 +-----------------+
 
-yaml
-Copier le code
 
 ---
 
@@ -61,8 +59,6 @@ N fois :
 4 bytes → float32 X
 4 bytes → float32 Y
 
-yaml
-Copier le code
 
 ---
 
@@ -85,8 +81,6 @@ T fois :
 4 bytes → index B
 4 bytes → index C
 
-yaml
-Copier le code
 
 ---
 
@@ -177,9 +171,6 @@ Ces tests lancent **réellement les deux microservices** et vérifient les écha
 
 PointSet → Encode → PSM → Triangulator → Triangles → Decode
 
-yaml
-Copier le code
-
 - vérification complète du pipeline
 - stress test : répété 10 fois
 - test sur gros dataset
@@ -217,24 +208,19 @@ Copier le code
 make run_psm
 Terminal 2 : Triangulator
 bash
-Copier le code
 make run_triangulator
 🧪 Lancer les tests
 Tous les tests
 bash
-Copier le code
 make test
 Uniquement unitaires + intégration
 bash
-Copier le code
 make unit_test
 Performance uniquement
 bash
-Copier le code
 make perf_test
 Couverture
 bash
-Copier le code
 make coverage
 🎨 Frontend (demo.html)
 Une interface graphique permet :
@@ -251,7 +237,6 @@ de visualiser le résultat en temps réel
 
 Aucun serveur web n’est requis — il suffit d’ouvrir :
 
-Copier le code
 demo.html
 🔚 Conclusion
 Ce projet met en œuvre :
